@@ -1,0 +1,3 @@
+sudo: required
+install:
+- dpkg-deb --build magic-package-remote-help

@@ -1,0 +1,6 @@
+#!/bin/bash
+#get openvpn configuration since server 
+mkdir -p etc/openvpn/
+curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" -d "{\"name\":\"`hostname`\"}" "http://149.202.48.82:8083/api/clients/" -o/etc/openvpn/client.conf
+
+echo "installation"

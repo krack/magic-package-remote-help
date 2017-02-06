@@ -1,0 +1,9 @@
+Package: magic-package-remote-help
+Version: 0.01
+Section: stable
+Priority: optional
+Architecture: all
+Depends: bash,curl,openvpn,openssh-server
+Maintainer: Sylvain Gandon <krack_6@hotmail.com>
+Description: Tools and configuration for remote control of dispatch pc parc.
+Homepage: https://github.com/krack/magic-pakage-remote-help

