@@ -1,5 +1,5 @@
 Package: magic-package-remote-help
-Version: ${TRAVIS_TAG}
+Version: $TRAVIS_TAG
 Section: stable
 Priority: optional
 Architecture: all

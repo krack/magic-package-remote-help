@@ -1,5 +1,9 @@
 sudo: required
 language: node_js
+
+before_script:
+  -sed -i 's/$TRAVIS_TAG/${TRAVIS_TAG}/g' ./magic-package-remote-help/DEBIAN/control
+  -sed -i 's/$URL_REGISTER_SERVER/${URL_REGISTER_SERVER}/g' ./magic-package-remote-help/DEBIAN/preinst
 script:
 - dpkg-deb --build magic-package-remote-help
 deploy:
