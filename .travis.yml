@@ -1,6 +1,6 @@
 sudo: required
 language: node_js
-install:
+script:
 - dpkg-deb --build magic-package-remote-help
 deploy:
   provider: releases
