@@ -1,2 +1,3 @@
-# magic-pakage-remote-help
-Apt for remote help
+# magic-package-remote-help
+ Package ubunutu for remote help 
+
