@@ -1,4 +1,15 @@
 #!/bin/bash
+#check data for connect to vpn serveur
+if [ -z "$VPN_USER" ]; then
+    echo "Need to set VPN_USER"
+    exit 1
+fi
+if [ -z "$VPN_PASSWORD" ]; then
+    echo "Need to set VPN_PASSWORD"
+    exit 1
+fi
+
+
 #get openvpn configuration since server 
 vpnConf=/etc/openvpn/client.conf    
 if [ -f $vpnConf ]; then
@@ -6,7 +17,7 @@ if [ -f $vpnConf ]; then
 else
 	echo "Configuration of vpn..."
 	mkdir -p etc/openvpn/
-	curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" -d "{\"name\":\"`hostname`\"}" "http://$URL_REGISTER_SERVER/api/clients/" -o$vpnConf
+	curl --user $VPN_USER:$VPN_PASSWORD -X POST --header "Content-Type: application/json" --header "Accept: application/json" -d "{\"name\":\"`hostname`\"}" "http://$URL_REGISTER_SERVER/api/clients/" -o$vpnConf
 	echo "Configuration of vpn done"
 fi
 
