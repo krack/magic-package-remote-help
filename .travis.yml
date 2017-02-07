@@ -1,15 +1,18 @@
 sudo: required
 language: node_js
-
 before_script:
 - sed -i 's/$TRAVIS_TAG/'${TRAVIS_TAG:-0}'/g' ./magic-package-remote-help/DEBIAN/control
 - sed -i 's/$URL_REGISTER_SERVER/'${URL_REGISTER_SERVER}'/g' ./magic-package-remote-help/DEBIAN/preinst
 script:
 - dpkg-deb --build magic-package-remote-help
+
 deploy:
-  provider: releases
-  api_key:
-    secure: V8OM+eEZmSBR9Gs9AuBxLZcffPiNyXVEli6rJGBvzIorjG/l27I7cTpP8fq3BeX423KT8Ag3A8QQ7nwaEr/TZiVRGqxWTlu9matK39kdrvq/B9kjvhgFPWOIO20SZWVuvro4hUiKmHMtglCv3JQECIST5+yzrLdk3eJg7lnsL9FpL5uGm2gMhZ/CR5Mkl81eGa84wQe7yJAX0BP6Zd67HfbxRDyy1r3ICH8dxB+zAMi2/EymlpGqPaKQHIPG+ElGkdn5OjFrmtx72JYM3hyPNdSv00T+nUawoz3H505+NZ2bzavAKkNvrejpr2QY4dtG8Wdif97QBAXfA5d4z6FGQClE91iejJpaSU/I7P6vY1nzQh1Kv//T6OCrws5WsgcwJ1MXDUUkQjI9QG0BvTh6d3SOBCv7KRjnGRbk170Q0GX4PSehMts7QuyoFYyi2Yffi6VdFS3GMXv80urCAFiPeIVrzg0FbVtr7+AaJRLUKTlwMK1aHp5mUgh7vNAEwUi7UMfL862m+Pa+75i7OohuL4vQzVBVy8K4i9S23j1JRbMfrVbER1I33dE57pVxAS3thQsNS6kr5OVPfVL7mFSmLzhd0BUmKehYD22ytSYRjiHDAfJo8lebijzyj1JVhuMChMAZn4R12jfKl5gzLc3bRnMR0nqwvkHOZCpgUmA51Qo=
-  file: magic-package-remote-help.deb
+  provider: packagecloud
+  repository: "magic-package"
+  username: "krack"
+  token:
+    secure: hxcBAw8Jkp1ppHRA7VrmJ0ZS2Z9cj0QGqh67KgiIiSoN4YH8NaZpMhdaK+kw7GLzb39vzSb9DQy28+O+YMpqLRPWmRG7Matx12fBJw2diQj2DlX9nHoI2A3UAJ2ZRrbCGg1pJo1z921RioC4326Ym6voxhvGfny0X18Urr2fIKXrMeGys+6d3jblDx7NabVRtOkKcq9AtVCnWv55WYWvBMqci7fhcxQDS2D0TtA4Bl/aohg2G5/D5TnkEv/DIMJOSPAyK9gC8ryvZKte+t/fovMKKuVms6LczIqI466KciRVd2I56w8fVFlLb6NCRLOfVO/rZ3rd6EdG72aG1riK+CGu6UWpLbeiDvHWW+ktWgWTqfPXpSkwUtl/l/TFKqMXgRKQX/KP0vjxtgtN+qhvt9ZOwsG6qKotsDIkVh0RU/GeOxUfHZ4zc7nBHr+Sw//axSuw1vSoL5wLTpWIaHEcpYdSj4FWp00wjE/c1K0M4+MyVlsYML6Z3MM42LLJpGWUUm9Y20n7cCx417ne1azhPifTgP9wACpKfuq1VkKKBSeTYan6kh5N63aQnOGUKLP+v6rEFsXZwsiWr2nXY+fbEA4nsbPm4LDQR9Yojdj76vCy2FGJsnJ6T91GCPQ4rlOYzqNvUc2jYD83qGkQYjZYU6Y02gtp7NGyfPPl87aEAYg=
+  dist: "ubuntu/xenial" # like 'ubuntu/precise', or 'centos/5', if pushing deb or rpms
   on:
     tags: true
+  
