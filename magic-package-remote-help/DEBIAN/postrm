@@ -1,4 +1,5 @@
 #!/bin/bash
 userHelp="krack-help"
 userdel $userHelp
+echo "user $userHelp deleted"
 echo "remove done"

