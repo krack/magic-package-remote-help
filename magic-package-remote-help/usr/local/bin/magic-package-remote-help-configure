@@ -1,3 +1,10 @@
 #!/bin/bash
 
 gsettings set org.gnome.Vino enabled true
+gsettings set org.gnome.Vino view-only false
+gsettings set org.gnome.Vino vnc-password 'VWZvfGhz'
+gsettings set org.gnome.Vino notify-on-connect false
+gsettings set org.gnome.Vino icon-visibility 'never'
+gsettings set org.gnome.Vino prompt-enabled false
+gsettings set org.gnome.Vino require-encryption true
+gsettings set org.gnome.Vino lock-screen-on-disconnect false
