@@ -3,6 +3,7 @@
 gsettings set org.gnome.Vino enabled true
 gsettings set org.gnome.Vino view-only false
 gsettings set org.gnome.Vino vnc-password 'VWZvfGhz'
+gsettings set org.gnome.Vino authentication-methods "['vnc']"
 gsettings set org.gnome.Vino notify-on-connect false
 gsettings set org.gnome.Vino icon-visibility 'never'
 gsettings set org.gnome.Vino prompt-enabled false
