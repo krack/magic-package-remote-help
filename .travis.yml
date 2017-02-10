@@ -13,6 +13,7 @@ deploy:
   token:
     secure: hxcBAw8Jkp1ppHRA7VrmJ0ZS2Z9cj0QGqh67KgiIiSoN4YH8NaZpMhdaK+kw7GLzb39vzSb9DQy28+O+YMpqLRPWmRG7Matx12fBJw2diQj2DlX9nHoI2A3UAJ2ZRrbCGg1pJo1z921RioC4326Ym6voxhvGfny0X18Urr2fIKXrMeGys+6d3jblDx7NabVRtOkKcq9AtVCnWv55WYWvBMqci7fhcxQDS2D0TtA4Bl/aohg2G5/D5TnkEv/DIMJOSPAyK9gC8ryvZKte+t/fovMKKuVms6LczIqI466KciRVd2I56w8fVFlLb6NCRLOfVO/rZ3rd6EdG72aG1riK+CGu6UWpLbeiDvHWW+ktWgWTqfPXpSkwUtl/l/TFKqMXgRKQX/KP0vjxtgtN+qhvt9ZOwsG6qKotsDIkVh0RU/GeOxUfHZ4zc7nBHr+Sw//axSuw1vSoL5wLTpWIaHEcpYdSj4FWp00wjE/c1K0M4+MyVlsYML6Z3MM42LLJpGWUUm9Y20n7cCx417ne1azhPifTgP9wACpKfuq1VkKKBSeTYan6kh5N63aQnOGUKLP+v6rEFsXZwsiWr2nXY+fbEA4nsbPm4LDQR9Yojdj76vCy2FGJsnJ6T91GCPQ4rlOYzqNvUc2jYD83qGkQYjZYU6Y02gtp7NGyfPPl87aEAYg=
   dist: "ubuntu/xenial"
+  skip_cleanup: true
   on:
     tags: false
 - provider: packagecloud
@@ -21,6 +22,7 @@ deploy:
   token:
      secure: hxcBAw8Jkp1ppHRA7VrmJ0ZS2Z9cj0QGqh67KgiIiSoN4YH8NaZpMhdaK+kw7GLzb39vzSb9DQy28+O+YMpqLRPWmRG7Matx12fBJw2diQj2DlX9nHoI2A3UAJ2ZRrbCGg1pJo1z921RioC4326Ym6voxhvGfny0X18Urr2fIKXrMeGys+6d3jblDx7NabVRtOkKcq9AtVCnWv55WYWvBMqci7fhcxQDS2D0TtA4Bl/aohg2G5/D5TnkEv/DIMJOSPAyK9gC8ryvZKte+t/fovMKKuVms6LczIqI466KciRVd2I56w8fVFlLb6NCRLOfVO/rZ3rd6EdG72aG1riK+CGu6UWpLbeiDvHWW+ktWgWTqfPXpSkwUtl/l/TFKqMXgRKQX/KP0vjxtgtN+qhvt9ZOwsG6qKotsDIkVh0RU/GeOxUfHZ4zc7nBHr+Sw//axSuw1vSoL5wLTpWIaHEcpYdSj4FWp00wjE/c1K0M4+MyVlsYML6Z3MM42LLJpGWUUm9Y20n7cCx417ne1azhPifTgP9wACpKfuq1VkKKBSeTYan6kh5N63aQnOGUKLP+v6rEFsXZwsiWr2nXY+fbEA4nsbPm4LDQR9Yojdj76vCy2FGJsnJ6T91GCPQ4rlOYzqNvUc2jYD83qGkQYjZYU6Y02gtp7NGyfPPl87aEAYg=
   dist: "ubuntu/yakkety" 
+  skip_cleanup: true
   on:
      tags: false 
 - provider: packagecloud
@@ -29,6 +31,7 @@ deploy:
   token:
     secure: hxcBAw8Jkp1ppHRA7VrmJ0ZS2Z9cj0QGqh67KgiIiSoN4YH8NaZpMhdaK+kw7GLzb39vzSb9DQy28+O+YMpqLRPWmRG7Matx12fBJw2diQj2DlX9nHoI2A3UAJ2ZRrbCGg1pJo1z921RioC4326Ym6voxhvGfny0X18Urr2fIKXrMeGys+6d3jblDx7NabVRtOkKcq9AtVCnWv55WYWvBMqci7fhcxQDS2D0TtA4Bl/aohg2G5/D5TnkEv/DIMJOSPAyK9gC8ryvZKte+t/fovMKKuVms6LczIqI466KciRVd2I56w8fVFlLb6NCRLOfVO/rZ3rd6EdG72aG1riK+CGu6UWpLbeiDvHWW+ktWgWTqfPXpSkwUtl/l/TFKqMXgRKQX/KP0vjxtgtN+qhvt9ZOwsG6qKotsDIkVh0RU/GeOxUfHZ4zc7nBHr+Sw//axSuw1vSoL5wLTpWIaHEcpYdSj4FWp00wjE/c1K0M4+MyVlsYML6Z3MM42LLJpGWUUm9Y20n7cCx417ne1azhPifTgP9wACpKfuq1VkKKBSeTYan6kh5N63aQnOGUKLP+v6rEFsXZwsiWr2nXY+fbEA4nsbPm4LDQR9Yojdj76vCy2FGJsnJ6T91GCPQ4rlOYzqNvUc2jYD83qGkQYjZYU6Y02gtp7NGyfPPl87aEAYg=
   dist: "ubuntu/xenial"
+  skip_cleanup: true
   on:
     tags: true
 - provider: packagecloud
@@ -37,5 +40,6 @@ deploy:
   token:
      secure: hxcBAw8Jkp1ppHRA7VrmJ0ZS2Z9cj0QGqh67KgiIiSoN4YH8NaZpMhdaK+kw7GLzb39vzSb9DQy28+O+YMpqLRPWmRG7Matx12fBJw2diQj2DlX9nHoI2A3UAJ2ZRrbCGg1pJo1z921RioC4326Ym6voxhvGfny0X18Urr2fIKXrMeGys+6d3jblDx7NabVRtOkKcq9AtVCnWv55WYWvBMqci7fhcxQDS2D0TtA4Bl/aohg2G5/D5TnkEv/DIMJOSPAyK9gC8ryvZKte+t/fovMKKuVms6LczIqI466KciRVd2I56w8fVFlLb6NCRLOfVO/rZ3rd6EdG72aG1riK+CGu6UWpLbeiDvHWW+ktWgWTqfPXpSkwUtl/l/TFKqMXgRKQX/KP0vjxtgtN+qhvt9ZOwsG6qKotsDIkVh0RU/GeOxUfHZ4zc7nBHr+Sw//axSuw1vSoL5wLTpWIaHEcpYdSj4FWp00wjE/c1K0M4+MyVlsYML6Z3MM42LLJpGWUUm9Y20n7cCx417ne1azhPifTgP9wACpKfuq1VkKKBSeTYan6kh5N63aQnOGUKLP+v6rEFsXZwsiWr2nXY+fbEA4nsbPm4LDQR9Yojdj76vCy2FGJsnJ6T91GCPQ4rlOYzqNvUc2jYD83qGkQYjZYU6Y02gtp7NGyfPPl87aEAYg=
   dist: "ubuntu/yakkety" 
+  skip_cleanup: true
   on:
      tags: true 
