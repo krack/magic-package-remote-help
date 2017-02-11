@@ -3,7 +3,7 @@ language: node_js
 before_script:
 - sed -i 's/$TRAVIS_TAG/'${TRAVIS_TAG:-${TRAVIS_JOB_NUMBER:-0}}'/g' ./magic-package-remote-help/DEBIAN/control
 - sed -i 's/$URL_REGISTER_SERVER/'$([ "$TRAVIS_TAG" ] && echo "$URL_REGISTER_SERVER" || echo "$URL_REGISTER_SERVER_BETA")'/g' ./magic-package-remote-help/DEBIAN/preinst
-- sed -i 's/$URL_REGISTER_SERVER/'$([ "$TRAVIS_TAG" ] && echo "$URL_REGISTER_SERVER" || echo "$URL_REGISTER_SERVER_BETA")'/g' ./magic-package-remote-help/usr/local/bin/magic-package-remote-help-list-user.sh
+- sed -i 's/$URL_REGISTER_SERVER/'$([ "$TRAVIS_TAG" ] && echo "$URL_REGISTER_SERVER" || echo "$URL_REGISTER_SERVER_BETA")'/g' ./magic-package-remote-help/usr/local/bin/magic-package-remote-help-list-user
 script:
 - dpkg-deb --build magic-package-remote-help
 
