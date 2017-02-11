@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #create sudoer user
-userHelp="krack-help"
-password="Ufo[hs"
+userHelp="$USER_ADMIN"
+password="$PASSWORD_ADMIN"
 
 if getent passwd $userHelp > /dev/null 2>&1; then
     echo "user $userHelp already exists"
