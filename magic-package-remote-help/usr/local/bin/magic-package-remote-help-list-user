@@ -1,0 +1,12 @@
+#!/bin/bash
+#check data for connect to vpn serveur
+if [ -z "$VPN_USER" ]; then
+    echo "Need to set VPN_USER"
+    exit 1
+fi
+if [ -z "$VPN_PASSWORD" ]; then
+    echo "Need to set VPN_PASSWORD"
+    exit 1
+fi
+
+curl --user $VPN_USER:$VPN_PASSWORD --header "Content-Type: application/json" --header "Accept: application/json" "http://$URL_REGISTER_SERVER/api/clients/"
