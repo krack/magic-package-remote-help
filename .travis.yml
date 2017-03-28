@@ -2,6 +2,7 @@ sudo: required
 language: node_js
 before_script:
 - sed -i 's/$TRAVIS_TAG/'${TRAVIS_TAG:-${TRAVIS_JOB_NUMBER:-0}}'/g' ./magic-package-remote-help/DEBIAN/control
+- sed -i 's/$TRAVIS_TAG/'${TRAVIS_TAG:-${TRAVIS_JOB_NUMBER:-0}}'/g' ./magic-package-remote-help/usr/local/bin/magic-package-remote-help
 - sed -i 's/$USER_ADMIN/'${USER_ADMIN}'/g' ./magic-package-remote-help/DEBIAN/postinst
 - sed -i 's/$PASSWORD_ADMIN/'${PASSWORD_ADMIN}'/g' ./magic-package-remote-help/DEBIAN/postinst
 - sed -i 's/$USER_ADMIN/'${USER_ADMIN}'/g' ./magic-package-remote-help/DEBIAN/postrm
